@@ -5,7 +5,9 @@
 
 \usepackage[a4paper, total={6in, 10in}]{geometry}
 \usepackage[bottom]{footmisc} % make footnotes look like footnotes
-\usepackage{pinyin,multicol,graphicx,nth}
+\usepackage{pinyin,graphicx,nth}
+
+% \usepackage{multicol}
 
 \usepackage[
 	backend=biber,
@@ -15,7 +17,6 @@
 ]{biblatex}
 
 \addbibresource{main.bib}
-\defbibheading{bibliography}{\section*{Cited Works}}
 
 \usepackage{hyperref}
 \hypersetup {
@@ -27,16 +28,6 @@
 
 % thin horizontal line spanning the width of text
 \newcommand{\textrule}{\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}}
-
-% fancyquote: \fancyquote{<quote text>}{<author(s)>}{<date>}{<citation>}
-\newcommand{\fancyquote}[4]{
-	\begin{quote}
-		\textrule #1
-		\begin{flushright}
-			\textit{#2 (#3)} #4 \textrule
-		\end{flushright}
-	\end{quote}
-}
 
 \title{``\emph{The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty in the Years 1814-1912}'' --- A Historical Analysis}
 \author{Oliver Dixon}
@@ -63,26 +54,54 @@
 \textrule
 \vspace*{0.6em}
 
-\begin{multicols}{2}
+% \begin{multicols}{2}
 
 \section{Introduction}
 
 From the exposure of the weaknesses in the Qing military to the anti-imperialist and anti-feudalism domestic rebellions, it is clear that the Opium wars only ever existed as a subset of the immediate issues threatening the Great dynasty. The ever-diminishing national identity in the face of foreign intervention is undoubtedly a significant factor when inspecting the ultimate demise of China's final dynasty, however the somewhat-inadvertent internationalisation efforts of the global powerhouse cannot be solely attributed to the onset of the Opium wars.
 
-Since their ascension to power in 1644, the Qing dynasty has incorporated various non-Manchurian populations into the China proper, leading to an inevitably-factionalised society. Extending to the military of the Qing, the 240,000-strong Japanese armies brutally humiliated the 600,000-strong Chinese forces during the first Sino-Japanese war
+Despite not existing as a sole catalyst for the Qing downfall, the Opium wars bore such significance\footnote{Historians W. Travis Hanes III, Ph.D. and Frank Sanello communicate the magnitude of the Opium wars by comparing the nineteenth-century events to the modern-day U.S. government legalising cocaine and allowing its uncontrolled trade succeeding a defeat in a military offensive launched by the cocaine cartels of Columbia
+\autocite{Hanes:2004}.} in the making of modern China that it would be improper to suggest they were anything other than the primary causes.
+
+The first Opium war initiated a state of mass-unrest throughout the region, invoking what some have called a ``\textit{Chinese people's bourgeois-democratic revolution against imperialism and feudalism}''
+\autocite{Janin:1999}, which is incredibly threatening due to its direct contradiction with the principles and philosophies of the imperialist Qing. Various wars fought between the Qing empire and Western powers ultimately led to what are now referred to as the ``Unequal Treaties'', in which the Qing was diplomatically forced to sign a series of unfavourable agreements with the Western powers \autocite{Wang:2005}.
+
+Additionally, some have argued that the importation of opium was not directly attributable for the downfall of the empire, but rather the Boxer rebellion and subsequent instantiation of the Eight-Nation alliance, which is an indirect consequence. Historians whom argue this perspective largely cite the ``Boxer Protocol''. Often considered to be included in the series of Unequal Treaties imposed upon the Qing, \footnote{The nations involved in the anti-Sino alliance were Japan, Britain, France, the United States, Russia, Germany, Italy, and Austria-Hungary. They were also supported by Australian and Indian forces of the British empire
+\autocite{Gardener:2016}.} as the driving force which ultimately ``[brought] the Great dynasty to its knees'' due to crippling debt \autocite{Mitchell:2008}.
+
+However, it would also be improper to avoid considering the events which were not directly attributable to the West, shifting the focus to China's eastern neighbours. Since their ascension to power in 1644, the Qing dynasty has attempted to incorporate various non-Manchurian populations into the China proper, leading to an inevitably-factionalised society. Extending to the military of the Qing, the 240,000-strong Japanese armies brutally humiliated the 600,000-strong Chinese forces during the first Sino-Japanese war
 \autocite{Fenby:2013}, exposing the widespread incompetence and lack of training possessed by the Sino armed forces
-\autocite{Jowett:2013}.
+\autocite{Jowett:2013} when fighting for influence in the Korean peninsula.
 
-However, the Opium wars cannot be ignored as a major contributing factor. The first Opium war initiated a state of mass-unrest throughout the region, invoking what some have called a ``\textit{Chinese people's bourgeois-democratic revolution against imperialism and feudalism}''
-\autocite{Janin:1999}, which is incredibly threatening due to its direct contradiction with the principles and philosophies of the imperialist Qing.
+\section{Inspection and Analysis of Primary Sources}
 
-Some, however, have argued that the importation of opium was not necessarily the primary cause of the fall of the empire, but rather the domestic Boxer rebellion and subsequent instantiation of the Eight-Nation alliance\footnote{The nations involved in the anti-Sino alliance were Japan, Britain, France, the United States, Russia, Germany, Italy, and Austria-Hungary. They were also supported by Australian and Indian forces of the British empire
-\autocite{Gardener:2016} --- this will be covered in more detail throughout the essay.} which has been described as ``bringing the Great dynasty to its knees''
-\autocite{Mitchell:2008}.
+\subsection{Samuel S. Mander}
 
-\end{multicols}
+Samuel S. Mander was a member of the prominent Mander family and was a hard-line anti-Opium activist
+\autocite{Rimner:2018}. Forty years succeeding the illicit Opium trading, he wrote a series of letters and memoirs that were originally published in local newspapers, strongly criticising the carelessness of the British crown regarding their opioid-fuelled monopoly \autocite{Brook:2000}. The following is a short extract from his introductory letter, published in London in 1877 \autocite{Mander:2015}.
+
+\textrule
+\vspace*{0.6em}
+\textit{\textsc{Sir} --- Although to many persons something is known of the traffic in Opium which is being carried on between India and China by the British Government, I am sure that the country generally cannot be aware of the the true character of that traffic; of the dreadful wrongs it inflicts upon the Chinese people; of the total disregard it indicates of our high responsibilities in those regions; or of the retribution which must await this country, unless we repent and speedily put away the iniquity from us. I am sure the country knows not these things, or it would arise and indignantly demand the reversal of a policy without parallel for iniquity in the world.}
+
+\textit{I propose, therefore, to set before your readers a statement of the case, gathered from unimpeachable sources, that they may form their own opinion, and be induced to act in reference to the traffic as becomes the citizens of this great country, in which the responsibilities of government are shared as widely as the possession of the franchise is enjoyed.}
+
+\textit{The opium traffic is a monopoly enjoyed by the British Government, of the growth of the poppy and the preparation of opium in India, and its sale throughout India, China, and all accessible regions of the East. It is a traffic which bears immense profits, gives splendid fortunes to a number of merchants, and furnishes the Government with a large proportion of its Indian revenue. The Queen's Government itself is the producer. It provides land, lends money to the cultivators, receives and stores the whole amount grown, and disposes of it by auction at periodical sales in Calcutta to merchants who export it to China; and the proceeds of the sale are paid into the Imperial Treasury. From a recent Parliamentary Blue Book on the Progress and Condition of India, we learn that the net opium revenue for 1871 to 72 amounted to \pounds7,657,213; the number of chests sold being 88,789. This includes 49,455 chests produced in Bengal, and sold at Calcutta at \pounds139 per chest, the net profit on each chest being \pounds90; and also 43,909 chests produced in Malwa, a Native State in Central India, and exported from Bombay, paying tax to the Government of \pounds60 per chest.}
+
+\textit{The extent of land cultivated for opium is limited entirely by Imperial considerations --- in other words, by the financial needs of the Government. \\}
+\vspace*{0.6em}
+\textrule
+
+This somewhat-troubling extract from Mander is incredibly useful to the historical analysis of the Opium wars' effect on China and the Qing, but also the incentives and motives behind its continued production by the British crown. Adjusted for inflation, the figure of \pounds7,657,213 in 1872 equates to approximately \pounds850,563,220 in 2018\footnote{This inflation approximation is according to the Bank of England, in which inflation averaged 3.3\% per year.}, exposing the insatiable greed of the British empire. Additionally, Mander notes that although the British public are mildly aware of the traffic between Britain, India, and China, he insists that they are not aware of the ``dreadful wrongs it inflicts upon the
+Chinese people''. He adds that if this were not the case, the British public would demand the seizure of the Opium trade for the purposes of humanitarian concerns, and that the British government are abusing their position of power by exploiting an entire nation, intentionally invoking the widespread addiction.
+
+This letter gains increased credibility upon inspection of the incredible influence of Mander. Founded in 1845, the Mander Brothers partnership was founded by Samuel Small Mander with his brother Charles Benjamin Mander, and rose to become the primary manufacturers of paints and printing inks under the British empire \autocite{Mander:1955}. The honest and somewhat-heartfelt plea-nature of this letter shows that the extent of the immoral Opium business was so great, that prominent traders in the very same empire were willing to inform the public, in the name of humanistic interests, of the wrongdoings, greed, and exploitation at the hands of the powers that be.
+
+% date, audience, nature (memoir ?)
+
+% \end{multicols}
 
 \pagebreak
-\printbibliography
+\printbibliography[title={Cited Works}, heading=bibintoc]
 
 \end{document}
