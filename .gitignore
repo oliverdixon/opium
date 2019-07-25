@@ -7,6 +7,7 @@ nocommit/
 # Edited by Ashley Dixon
 
 *.pdf
+!chinese_frontcover.pdf*
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
