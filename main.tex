@@ -6,7 +6,9 @@
 \usepackage[a4paper, total={6in, 10in}]{geometry}
 \usepackage[bottom]{footmisc} % make footnotes look like footnotes
 \usepackage[super]{nth}
-\usepackage{graphicx,mdframed,xcolor}
+\usepackage{graphicx,mdframed,xcolor,indentfirst,fancyhdr,titling}
+
+% --- BIBLIOGRAPHY SET-UP --- %
 
 \usepackage[
 	backend=biber,
@@ -17,15 +19,34 @@
 
 \addbibresource{main.bib}
 
+% Break long U.R.L.s which do not contain breaking characters
+% -- from https://tex.stackexchange.com/a/134281
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+% --- HYPERREF IMPORT AND SET-UP --- %
+
 \usepackage{hyperref}
 \hypersetup {
 	colorlinks = true,
 	allcolors = {blue}
 }
 
-% \tolerance=10000 % "infinite" tolerance (see TeXBook page 29)
-\emergencystretch=1em
-\setlength{\footnotesep}{1em}
+% --- FANCYHDR SET-UP --- %
+
+\fancypagestyle{stdhdr}{
+	\fancyhf{}
+	\fancyhead[R]{\textsc{\theauthor\space --- DIX18002469}}
+	\fancyhead[L]{\textit{A.Q.A.} A-Level History Non-Examined Assessment}
+	\fancyfoot[R]{Page \thepage}
+}
+
+\fancypagestyle{titlehdr}{
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+% --- ENVIRONMENT AND COMMAND SET-UP --- %
 
 % thin horizontal line spanning the width of text
 \newcommand{\textrule}{\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}}
@@ -46,14 +67,24 @@
 	{
 		\end{mdframed}
 	}
+	
+% \tolerance=10000 % "infinite" tolerance (see TeXBook page 29)
+\emergencystretch=1em
+\setlength{\footnotesep}{1em}
 
 \title{``\emph{The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty in the Years 1814-1912}'' --- A Historical Analysis}
 \author{Oliver Dixon}
 \date{Summer 2019}
 
+% ---------------------- %
+% --- DOCUMENT START --- %
+% ---------------------- %
+
 \begin{document}
 
-\maketitle
+\clearpage\maketitle
+\thispagestyle{titlehdr}
+\pagestyle{stdhdr}
 
 \vspace*{-1.5em}
 \begin{figure}[h!]
@@ -110,6 +141,8 @@ This source is an extremely useful piece of contemporary evidence when conductin
 \autocite{Kishlansky:1995}.} between the anti-opium groups and the \textit{East India Company}. It becomes increasingly-valuable when considering the author, recipient, and the circumstances in which the letter was written. Sent to Queen Victoria by the commissioner of the primary trading port of the \textit{East India Company}, Lin was likely in a more hopeful position to make a plea to \textit{Her Majesty} than any other entity in China due to his familiarity and knowledge on the matter. His extreme stance on serving the death penalty to distributors and users of opium represents the severity of the situation throughout China, while also exasperating the level to which opium-smoking was widespread to ``all provinces''.
 
 The unfathomably-widespread nature of opium throughout all Chinese provinces renders Lin's strongly-worded advice as an inescapable point-of-interest, as it undisputedly provides evidence to show the fundamental scar that opium had left on the Chinese population, and the desperation of the Qing to restore order by any means necessary.
+
+This source could be somewhat-limited due to the fact it was written by a high-ranking member of the Qing dynasty, whom had a strong inclination to exaggerate the effects of British presence in China in order to appease the Emperor, however the majority of his writings are known to be factual to a rather striking degree.
 
 \subsection{The Treaty of Nanjing (Treaty of Peace, Friendship, and Commerce Between Her Majesty the Queen of Great Britain and Ireland and the Emperor of China)}
 
