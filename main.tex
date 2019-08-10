@@ -6,7 +6,7 @@
 \usepackage[a4paper, total={6in, 10in}]{geometry}
 \usepackage[bottom]{footmisc} % make footnotes look like footnotes
 \usepackage[super]{nth}
-\usepackage{graphicx,mdframed,xcolor,indentfirst,fancyhdr,titling}
+\usepackage{graphicx,mdframed,xcolor,indentfirst,fancyhdr,titling,CJKutf8}
 
 % \usepackage[firstpage]{draftwatermark}
 % \SetWatermarkScale{2}
@@ -27,6 +27,8 @@
 % -- from https://tex.stackexchange.com/a/134281
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
+
+\newcommand{\jap}[1]{\begin{CJK}{UTF8}{min}\normalfont #1\end{CJK}}
 
 % --- HYPERREF IMPORT AND SET-UP --- %
 
@@ -66,7 +68,6 @@
 \newenvironment{fancyquote}
 	{
 		\begin{mdframed}[linecolor=lightgray]
-		\itshape
 	}
 	{
 		\end{mdframed}
