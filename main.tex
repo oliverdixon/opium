@@ -1,5 +1,6 @@
-% "The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty in the Years 1814-1912"
-% Oliver Dixon, History Coursework Dissertation LaTeX source (designed for PDFLaTeX)
+% "The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty
+% in the Years 1814-1912" Oliver Dixon, History Coursework Dissertation LaTeX
+% source (designed for PDFLaTeX)
 
 \documentclass{article}
 
@@ -28,28 +29,45 @@
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
 
-\newcommand{\jap}[1]{\begin{CJK}{UTF8}{min}\normalfont #1\end{CJK}}
-\newcommand{\zht}[1]{\begin{CJK}{UTF8}{bsmi}\normalfont #1\end{CJK}}
-\newcommand{\zhs}[1]{\begin{CJK}{UTF8}{gbsn}\normalfont #1\end{CJK}}
+\newcommand{\jap}[1]{%
+        \begin{CJK}{UTF8}{min}%
+                \normalfont%
+                #1
+        \end{CJK}
+}
+
+\newcommand{\zht}[1]{%
+        \begin{CJK}{UTF8}{bsmi}%
+                \normalfont%
+                #1
+        \end{CJK}
+}
+
+\newcommand{\zhs}[1]{%
+        \begin{CJK}{UTF8}{gbsn}
+                \normalfont%
+                #1
+        \end{CJK}
+}
 
 % --- HYPERREF IMPORT AND SET-UP --- %
 
 \usepackage{hyperref}
-\hypersetup {
+\hypersetup{%
 	colorlinks = true,
 	allcolors = {blue}
 }
 
 % --- FANCYHDR SET-UP --- %
 
-\fancypagestyle{stdhdr}{
+\fancypagestyle{stdhdr}{%
 	\fancyhf{}
 	\fancyhead[R]{\theauthor}
 	\fancyhead[L]{\textit{A.Q.A. A-Level History} Non-Examined Assessment}
 	\fancyfoot[R]{Page \thepage}
 }
 
-\fancypagestyle{titlehdr}{
+\fancypagestyle{titlehdr}{%
 	\fancyhead{}
 	\renewcommand{\headrulewidth}{0pt}
 }
@@ -59,7 +77,7 @@
 % thin horizontal line spanning the width of text
 \newcommand{\textrule}{\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}}
 
-\newcommand{\articlehead}[1]{
+\newcommand{\articlehead}[1]{%
 	\vspace*{0.5em}
 	\begin{center}
 		\textsc{#1}
@@ -67,19 +85,19 @@
 	\vspace*{0.5em}
 }
 
-\newenvironment{fancyquote}
+\newenvironment{fancyquote}%
 	{
 		\begin{mdframed}[linecolor=lightgray]
 	}
 	{
-		\end{mdframed}
+		\end{mdframed}%
 	}
 	
 % \tolerance=10000 % "infinite" tolerance (see TeXBook page 29)
 \emergencystretch=1em
 \setlength{\footnotesep}{1em}
 
-\title{``\emph{The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty in the Years 1814-1912}'' --- A Historical Analysis}
+\title{``\emph{The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty in the Years 1814 to 1912}'' --- A Historical Analysis}
 \author{Oliver Dixon}
 \date{Summer 2019}
 
@@ -96,140 +114,108 @@
 \vspace*{-1.5em}
 \begin{figure}[h!]
 	\centering
-	\def\svgwidth{0.5\linewidth}
+        \def\svgwidth{0.5\linewidth}
 	\input{chinese_frontcover.pdf_tex}
 \end{figure}
 \vspace*{-0.5em}
 
 \begin{abstract}
 
-	Succeeding the Ming dynasty, the great Qing dynasty ruled from 1644 to 1912, achieving the most significant strides ever witnessed on the Chinese political spectrum. Aside from doubling the land under the empire
-	\autocite{Turchin:2006} while tripling the population through encapsulation of a broad range\footnote{Such ethnicities include the Uyghur Muslims native to Xinjiang, Tibetans, Mongols, and Burmese
-	\autocite{Chia:1993}. These ethnic groups, often rather reluctantly
-	\autocites{Teichman:2002}{Smith:2009}{Dwyer:2005}, still remain part of China today.} of ethnicities within the Chinese state
-	\autocite{Rowe:2012}, the dynasty enjoyed economic superiority of proportions that Europe, the Americas, and their other Asian neighbours could only imagine 
-	\autocite{Maddison:2007}. Despite their initial prosperity and success as an irreplaceable and integral element of the rapidly-increasing worldwide economy, the Qing empire suffered the fate of taking the place as the final imperial dynasty of China due to an array of factors, both international and domestic.
+	Succeeding the Ming dynasty, the great Qing dynasty ruled from 1644 to 1912, achieving the most significant strides ever witnessed on the Chinese political spectrum. Aside from doubling the land under the empire \autocite{Turchin:2006} while tripling the population through encapsulation of a broad range\footnote{Such ethnicities include the Uyghur Muslims native to Xinjiang, Tibetans, Mongols, and Burmese \autocite{Chia:1993}. These ethnic groups, often rather reluctantly \autocites{Teichman:2002}{Smith:2009}{Dwyer:2005}, still remain part of China today.} of ethnicities within the Chinese state \autocite{Rowe:2012}, the dynasty enjoyed economic superiority of proportions that Europe, the Americas, and their other Asian neighbours could only imagine \autocite{Maddison:2007}. Despite their initial prosperity and success as an irreplaceable and integral element of the rapidly-increasing worldwide economy, the Qing empire suffered the fate of taking the place as the final imperial dynasty of China due to an array of factors, both international and domestic.
 
-	This essay will discuss the factors which led to the downfall of the greatest dynasty\footnote{It has been repeatedly suggested, by the Naito hypothesis, that the emperor of China became more secure after the Song dynasty
-	\autocite{Miyakawa:1955}. ``Usurpation became rare after the introduction of examinations to select officials.''
-	\autocite{Sng:2014}} in the history of China. Also under examination will be the extent to which the strained international trade relations with the East India Company and the ensuing Opium wars contributed to the ultimate demise of 1912.
+        This essay will discuss the factors which led to the downfall of the greatest dynasty\footnote{It has been repeatedly suggested, by the Naito hypothesis, that the emperor of China became more secure after the Song dynasty \autocite{Miyakawa:1955}. ``Usurpation became rare after the introduction of examinations to select officials.'' \autocite{Sng:2014}} in the history of China. Also under examination will be the extent to which the strained international trade relations with the East India Company and the ensuing Opium wars contributed to the ultimate demise of 1912.
 
 \end{abstract}
 
-\textrule
+\textrule%
 \vspace*{0.6em}
 {\centering \textsc{This ``Non-Examined Assessment'' Document is Presented as Partial Fulfilment of the \textit{A.Q.A. A-Level History} Qualification}\\}
-\textrule
+\textrule%
 
 \section{Introduction}
 
-From the exposure of the weaknesses in the Qing military to the anti-imperialist and anti-feudalism domestic rebellions, it is clear that the Opium wars only ever existed as a subset of the immediate issues threatening the Great dynasty. The ever-diminishing national identity\footnote{According to contemporary British travellers to China, a true Chinaman often despised all other nations than his own, while considering foreigners to be ``barbarians''
-\autocite{McPherson:1842}. These notes were published in the midst of the \textit{First Opium War} however, hence the general animosity towards foreigners was likely to have been understandably at its peak during the traveller's expedition.} in the face of foreign intervention is undoubtedly a significant factor when inspecting the ultimate demise of China's final dynasty, however the somewhat-inadvertent internationalisation efforts of the global powerhouse cannot be solely attributed to the onset of the opium wars.
+        From the exposure of the weaknesses in the Qing military to the anti-imperialist and anti-feudalism domestic rebellions, it is clear that the Opium wars only ever existed as a subset of the immediate issues threatening the Great dynasty. The ever-diminishing national identity\footnote{According to contemporary British travellers to China, a true Chinaman often despised all other nations than his own, while considering foreigners to be ``barbarians'' \autocite{McPherson:1842}. These notes were published in the midst of the \textit{First Opium War} however, hence the general animosity towards foreigners was likely to have been understandably at its peak during the traveller's expedition.} in the face of foreign intervention is undoubtedly a significant factor when inspecting the ultimate demise of China's final dynasty, however the somewhat-inadvertent internationalisation efforts of the global powerhouse cannot be solely attributed to the onset of the opium wars.
 
-Despite not existing as a sole catalyst for the Qing downfall, the opium wars bore such significance\footnote{Historians William Travis Hanes III, Ph.D. and Frank Sanello communicate the magnitude of the opium wars by comparing the nineteenth-century events to the modern-day U.S. government legalising cocaine and allowing its uncontrolled trade succeeding a defeat in a military offensive launched by the cocaine cartels of Columbia
-\autocite{Hanes:2004}.} in the making of modern China that it would be improper to suggest they were anything other than the primary causes.
+        Despite not existing as a sole catalyst for the Qing downfall, the opium wars bore such significance\footnote{Historians William Travis Hanes III, Ph.D. and Frank Sanello communicate the magnitude of the opium wars by comparing the nineteenth-century events to the modern-day U.S. government legalising cocaine and allowing its uncontrolled trade succeeding a defeat in a military offensive launched by the cocaine cartels of Columbia \autocite{Hanes:2004}.} in the making of modern China that it would be improper to suggest they were anything other than the primary causes.
 
-The first Opium war initiated a state of mass-unrest throughout the region, invoking what some have called a ``Chinese people's bourgeois-democratic revolution against imperialism and feudalism''
-\autocite{Janin:1999}, which is incredibly threatening due to its direct contradiction with the principles and philosophies of the imperialist Qing. Various wars fought between the Qing empire and Western powers ultimately led to what are now referred to as the \textit{Unequal Treaties}, in which the Qing was diplomatically forced to sign a series of unfavourable agreements with the Western powers \autocite{Wang:2005}.
+        The first Opium war initiated a state of mass-unrest throughout the region, invoking what some have called a ``Chinese people's bourgeois-democratic revolution against imperialism and feudalism'' \autocite{Janin:1999}, which is incredibly threatening due to its direct contradiction with the principles and philosophies of the imperialist Qing. Various wars fought between the Qing empire and Western powers ultimately led to what are now referred to as the \textit{Unequal Treaties}, in which the Qing was diplomatically forced to sign a series of unfavourable agreements with the Western powers \autocite{Wang:2005}.
 
-Additionally, some have argued that the importation of opium and ensuing wars were not directly attributable for the downfall of the empire, but rather the Boxer rebellion and subsequent instantiation of the Eight-Nation alliance, which is an indirect consequence. Historians whom argue this perspective largely cite the ``Boxer Protocol''. Often considered to be included in the series of Unequal Treaties imposed upon the Qing, \footnote{The nations involved in the anti-Qing alliance were Japan, Britain, France, the United States, Russia, Germany, Italy, and Austria-Hungary. They were also supported by Australian and Indian forces of the British empire
-\autocite{Gardener:2016}.} the protocol was the driving force which ultimately ``[brought] the Great dynasty to its knees'' due to crippling debt \autocite{Mitchell:2008}.
+        Additionally, some have argued that the importation of opium and ensuing wars were not directly attributable for the downfall of the empire, but rather the Boxer rebellion and subsequent instantiation of the Eight-Nation alliance, which is an indirect consequence. Historians whom argue this perspective largely cite the ``Boxer Protocol''. Often considered to be included in the series of Unequal Treaties imposed upon the Qing\footnote{The nations involved in the anti-Qing alliance were Japan, Britain, France, the United States, Russia, Germany, Italy, and Austria-Hungary. They were also supported by Australian and Indian forces of the British empire \autocite{Gardener:2016}.}, the protocol was the driving force which ultimately ``[brought] the Great dynasty to its knees'' due to crippling debt \autocite{Mitchell:2008}.
 
-However, it would also be improper to avoid considering the events which were not directly attributable to the West, shifting the focus to China's eastern neighbours. Since their ascension to power in 1644, the Qing dynasty has attempted to incorporate various non-Manchurian populations into the China proper, leading to an inevitably-factionalised society. Extending to the military of the Qing, the 240,000-strong Japanese armies brutally humiliated the 600,000-strong Chinese forces during the first Sino-Japanese war
-\autocite{Fenby:2013}, exposing the widespread incompetence and lack of training possessed by the Sino armed forces
-\autocite{Jowett:2013} when fighting for influence in the Korean peninsula.
+        However, it would also be improper to avoid considering the events which were not directly attributable to the West, shifting the focus to China's eastern neighbours. Since their ascension to power in 1644, the Qing dynasty has attempted to incorporate various non-Manchurian populations into the China proper, leading to an inevitably-factionalised society. Extending to the military of the Qing, the 240,000-strong Japanese armies brutally humiliated the 600,000-strong Chinese forces during the first Sino-Japanese war \autocite{Fenby:2013}, exposing the widespread incompetence and lack of training possessed by the Sino armed forces \autocite{Jowett:2013} when fighting for influence in the Korean peninsula.
 
 \section{Analysis of Primary Sources}
 
-\subsection{A Letter of Advice from Lin Tse-Hs\"u to Queen Victoria}
+        \subsection{A Letter of Advice from Lin Tse-Hs\"u to Queen Victoria}
 
-Lin Tse-Hs\"u, also known as Lin Zexu, was the Chinese commissioner in Canton, sent by the Qing emperor\footnote{The Qing emperor, Daoguang, allegedly lost his son, Xianfeng, to an opium-induced overdose in 1861, possibly fuelling Daoguang's absolute hatred of the opium trade
-\autocite{Ringmar:2013}. Xianfeng's death was incredibly controversial with anti- and pro-opium activists alike, submitting that the hypocrisy of his acts discredit all anti-opium opinions of the Qing. Before his death, he presented with \textit{massive haemoptysis} (the ``coughing-up'' of blood in excess of 600 millilitres
-\autocite{Sabatine:2013}).} to negotiate an end to the importation of opium by the East India Company. In 1839, preceding the \textit{First Opium War} by three years, Lin wrote a strongly-worded letter of advice to Queen Victoria, stating his strong desire to end the importation of opium by any means necessary. The following is a short extract from the English translation of the letter.
+        Lin Tse-Hs\"u, also known as Lin Zexu, was the Chinese commissioner in Canton, sent by the Qing emperor\footnote{The Qing emperor, Daoguang, allegedly lost his son, Xianfeng, to an opium-induced overdose in 1861, possibly fuelling Daoguang's absolute hatred of the opium trade \autocite{Ringmar:2013}. Xianfeng's death was incredibly controversial with anti- and pro-opium activists alike, submitting that the hypocrisy of his acts discredit all anti-opium opinions of the Qing. Before his death, he presented with \textit{massive haemoptysis} (the ``coughing-up'' of blood in excess of 600 millilitres \autocite{Sabatine:2013}).} to negotiate an end to the importation of opium by the East India Company. In 1839, preceding the \textit{First Opium War} by three years, Lin wrote a strongly-worded letter of advice to Queen Victoria, stating his strong desire to end the importation of opium by any means necessary. The following is a short extract from the English translation of the letter.
 
-\input{sources/victoria-letter} % LETTER TO QUEEN VICTORIA, TeX-EMBED
+        \input{sources/victoria-letter} % LETTER TO QUEEN VICTORIA, TeX-EMBED
 
-This source is an extremely useful piece of contemporary evidence when conducting an investigation into any aspect of the Qing dynasty, as it is written with an extraordinarily strong sense of foreshadowing for a violent conflict\footnote{Some scholars have stated that this letter is a somewhat unique piece of attempted diplomacy from China, as the incredibly direct letter violates their usual conventions of writing in a ``highly-stylised'' fashion
-\autocite{Kishlansky:1995}. This is a potential indicator to the true severity of the situation, such that a well-established governmental Chinaman would have correspondence in such a personalised and honest manner.} between the anti-opium groups and the \textit{East India Company}. It becomes increasingly-valuable when considering the author, recipient, and the circumstances in which the letter was written. Sent to Queen Victoria by the commissioner of the primary trading port of the \textit{East India Company}, Lin was likely in a more hopeful position to make a plea to \textit{Her Majesty} than any other entity in China due to his familiarity and knowledge on the matter. His extreme stance on serving the death penalty to distributors and users of opium represents the severity of the situation throughout China, while also exasperating the level to which opium-smoking was widespread to ``all provinces''.
+        This source is an extremely useful piece of contemporary evidence when conducting an investigation into any aspect of the Qing dynasty, as it is written with an extraordinarily strong sense of foreshadowing for a violent conflict\footnote{Some scholars have stated that this letter is a somewhat unique piece of attempted diplomacy from China, as the incredibly direct letter violates their usual conventions of writing in a ``highly-stylised'' fashion \autocite{Kishlansky:1995}. This is a potential indicator to the true severity of the situation, such that a well-established governmental Chinaman would have correspondence in such a personalised and honest manner.} between the anti-opium groups and the \textit{East India Company}. It becomes increasingly-valuable when considering the author, recipient, and the circumstances in which the letter was written. Sent to Queen Victoria by the commissioner of the primary trading port of the \textit{East India Company}, Lin was likely in a more hopeful position to make a plea to \textit{Her Majesty} than any other entity in China due to his familiarity and knowledge on the matter. His extreme stance on serving the death penalty to distributors and users of opium represents the severity of the situation throughout China, while also exasperating the level to which opium-smoking was widespread to ``all provinces''.
 
-The unfathomably-widespread nature of opium throughout all Chinese provinces renders Lin's strongly-worded advice as an inescapable point-of-interest, as it undisputedly provides evidence to show the fundamental scar that opium had left on the Chinese population, and the desperation of the Qing to restore order by any means necessary.
+        The unfathomably-widespread nature of opium throughout all Chinese provinces renders Lin's strongly-worded advice as an inescapable point-of-interest, as it undisputedly provides evidence to show the fundamental scar that opium had left on the Chinese population, and the desperation of the Qing to restore order by any means necessary.
 
-This source could be somewhat-limited due to the fact it was written by a high-ranking member of the Qing dynasty, whom had a strong inclination to exaggerate the effects of British presence in China in order to appease the Emperor, however the majority of his writings are known to be factual to a rather striking degree.
+        This source could be somewhat-limited due to the fact it was written by a high-ranking member of the Qing dynasty, whom had a strong inclination to exaggerate the effects of British presence in China in order to appease the Emperor, however the majority of his writings are known to be factual to a rather striking degree.
 
-\subsection{The Treaty of Nanjing (Treaty of Peace, Friendship, and Commerce Between Her Majesty the Queen of Great Britain and Ireland and the Emperor of China)}
+        \subsection{The Treaty of Nanjing (Treaty of Peace, Friendship, and Commerce Between Her Majesty the Queen of Great Britain and Ireland and the Emperor of China)}
 
-Often hailed as a ``turning-point in far-Eastern history''
-\autocite{Fairbank:1940}, the \textit{Treaty of Nanjing}, also known as the \textit{Treaty of Nanking}\footnote{Due to the vast differences of the Chinese and English languages, various romanisation methods were devised. ``Nanking'' is the \textit{Wade-Giles} romanisation, whereas ``Nanjing'' is the increasingly-popular \textit{Pinyin} romanisation. See \url{https://web.archive.org/web/20140714185035/http://www.sacu.org/roman.html} [archived] for more information.}, was a treaty between Britain and the Qing to end the \textit{First Opium War}. The general consensus regarding the treaty states that despite its undebatable harshness and inequality, the Qing representative (Qingyi) had no choice but to sign the agreement due to the their status as a ``defeated nation''
+        Often hailed as a ``turning-point in far-Eastern history'' \autocite{Fairbank:1940}, the \textit{Treaty of Nanjing}, also known as the \textit{Treaty of Nanking}\footnote{Due to the vast differences of the Chinese and English languages, various romanisation methods were devised. ``Nanking'' is the \textit{Wade-Giles} romanisation, whereas ``Nanjing'' is the increasingly-popular \textit{Pinyin} romanisation. See \url{https://web.archive.org/web/20140714185035/http://www.sacu.org/roman.html} [archived] for more information.}, was a treaty between Britain and the Qing to end the \textit{First Opium War}. The general consensus regarding the treaty states that despite its undebatable harshness and inequality, the Qing representative (Qingyi) had no choice but to sign the agreement due to the their status as a ``defeated nation''
 \autocite{Mao:2018}. The following extract is from the thirteen-article treaty, highlighting the most significant elements.
 
-\input{sources/nanjing} % TREATY OF NANJING, TeX-EMBED
+        \input{sources/nanjing} % TREATY OF NANJING, TeX-EMBED
 
-The treaty, signed \nth{29} August 1842 to come into effect on \nth{26} June 1843
-\autocite{Saw:1975}, possesses unparalleled potential usage when conducting an investigation into the causes of the downfall of the Qing empire. Despite its the fact that its implementation precedes the events of 1912 by seventy years, the effects of these articles represent the first significant international tension which China endured, causing some scholars to argue that the treaty was the initiator and catalyst for the downfall. The three selected articles exasperate the true strain which was placed on the empire; not only losing control of Hong Kong to the British crown, but also the forfeiture of \$21,000,000 to \textit{Her Majesty}\footnote{The penalty of \$21 million to \textit{Her Majesty} was broken down as follows: \$12 million for military expenses, \$6 million for the opium which China had destroyed, and \$3 million for the repayment of Chinese merchants' debts to the British
-\autocite{Hsu:1999}.} in addition to the free movement of British merchants throughout multiple Chinese ports on the mainland. As Britain suffered no obligations in return, the treaty became known as the first of the \textit{Unequal Treaties} signed between the Qing and Britain
-\autocite{Hoe:1999}. Some scholars also state that as ``Missionaries could preach within the empire [...], literary undertakings rather gave way to chapels, schools, and hospitals''
-\autocite{Britton:1933}, implicitly suggesting that the opening of Hong Kong and the five ports allowed the empire to prosper\footnote{An exemplar of the ways in which Hong Kong prospered is the fact that during the period 1841-60, ``the number of English and Chinese periodicals and newspapers published in Hong Kong was more than the total number in the rest of China''
-\autocite{Huang:2001}.} under British rule, hence undermining the authority and respect which had previously been owned solely by the Qing emperor.
+        The treaty, signed \nth{29} August 1842 to come into effect on \nth{26} June 1843 \autocite{Saw:1975}, possesses unparalleled potential usage when conducting an investigation into the causes of the downfall of the Qing empire. Despite its the fact that its implementation precedes the events of 1912 by seventy years, the effects of these articles represent the first significant international tension which China endured, causing some scholars to argue that the treaty was the initiator and catalyst for the downfall. The three selected articles exasperate the true strain which was placed on the empire; not only losing control of Hong Kong to the British crown, but also the forfeiture of \$21,000,000 to \textit{Her Majesty}\footnote{The penalty of \$21 million to \textit{Her Majesty} was broken down as follows: \$12 million for military expenses, \$6 million for the opium which China had destroyed, and \$3 million for the repayment of Chinese merchants' debts to the British \autocite{Hsu:1999}.} in addition to the free movement of British merchants throughout multiple Chinese ports on the mainland. As Britain suffered no obligations in return, the treaty became known as the first of the \textit{Unequal Treaties} signed between the Qing and Britain \autocite{Hoe:1999}. Some scholars also state that as ``Missionaries could preach within the empire [\ldots], literary undertakings rather gave way to chapels, schools, and hospitals'' \autocite{Britton:1933}, implicitly suggesting that the opening of Hong Kong and the five ports allowed the empire to prosper\footnote{An exemplar of the ways in which Hong Kong prospered is the fact that during the period 1841 to 60, ``the number of English and Chinese periodicals and newspapers published in Hong Kong was more than the total number in the rest of China'' \autocite{Huang:2001}.} under British rule, hence undermining the authority and respect which had previously been owned solely by the Qing emperor.
 
-According to
-\autocite{Hsu:1999}, ``[the] treaty was imposed by the victor upon the vanished at gunpoint, without the careful deliberation usually accompanying international agreements in Europe and America''. This comment on provenance increases the value of the source beyond its verbatim content, as the circumstances in which it was signed, where China were referred to as the ``vanished [nation]'', amplify its use into the realms of rendering the once Great dynasty as a completely-powerless and helpless state at the whim of the British.
+        According to \autocite{Hsu:1999}, ``[the] treaty was imposed by the victor upon the vanished at gunpoint, without the careful deliberation usually accompanying international agreements in Europe and America''. This comment on provenance increases the value of the source beyond its verbatim content, as the circumstances in which it was signed, where China were referred to as the ``vanished [nation]'', amplify its use into the realms of rendering the once Great dynasty as a completely-powerless and helpless state at the whim of the British.
 
-While the presented document is an undoubtedly vital piece of evidence for an analysis into the factors which led to the Qing downfall, it suffers from a similar limitation effecting all treaties and legal documents. This focuses on the fact that the agreements outlined in the document may not be non-distinct from the interpretation by the public of each empire, hence effecting the societal morale towards the dynasty. Due to the vast differences in the Chinese and English languages, it is clear that the Chinese translation, a product of the Qing society, was presented to the emperor in a heavily re-worded fashion, favouring China. While it maintained the core points of the agreements, the text suggests that the emperor is graciously providing the West with the aforementioned privileges and maintains absolutely no implication of a forceful signing. Hence, while this invaluable document explains the reality of the legal situation, it cannot be used as a descriptor for an analysis into the morale of the Chinese population toward the Qing: a rather significant element in their ultimate downfall.
+        While the presented document is an undoubtedly vital piece of evidence for an analysis into the factors which led to the Qing downfall, it suffers from a similar limitation effecting all treaties and legal documents. This focuses on the fact that the agreements outlined in the document may not be non-distinct from the interpretation by the public of each empire, hence effecting the societal morale towards the dynasty. Due to the vast differences in the Chinese and English languages, it is clear that the Chinese translation, a product of the Qing society, was presented to the emperor in a heavily re-worded fashion, favouring China. While it maintained the core points of the agreements, the text suggests that the emperor is graciously providing the West with the aforementioned privileges and maintains absolutely no implication of a forceful signing. Hence, while this invaluable document explains the reality of the legal situation, it cannot be used as a descriptor for an analysis into the morale of the Chinese population toward the Qing: a rather significant element in their ultimate downfall.
 
-An exemplar of this concerns the clause regarding the cession of Hong Kong. In the Chinese text, it is euphemistically stated that ``the emperor graciously grants a place of rest and storage to the British after their long voyage to China''
+        An exemplar of this concerns the clause regarding the cession of Hong Kong. In the Chinese text, it is euphemistically stated that ``the emperor graciously grants a place of rest and storage to the British after their long voyage to China''
 \autocite{Zhang:2007}. Similar language is used throughout the treaty.
 
-\subsection{``The Condition of China'': A \textit{Times} Newspaper Column by the \textit{Special Correspondent} to China}
+        \subsection{``The Condition of China'': A \textit{Times} Newspaper Column by the \textit{Special Correspondent} to China}
 
-The following newspaper column was written by the \textit{Special Correspondent} to China for \textit{The Times}, published in August, 1884. The column outlines the seldom amount of hope that is left for the reduction and eventual abolition of opium smoking within China, stating that Parliamentary-intervention would be meaningless, and any changes must be invoked by the Chinese population-at-large.
+        The following newspaper column was written by the \textit{Special Correspondent} to China for \textit{The Times}, published in August, 1884. The column outlines the seldom amount of hope that is left for the reduction and eventual abolition of opium smoking within China, stating that Parliamentary-intervention would be meaningless, and any changes must be invoked by the Chinese population-at-large.
 
-\input{sources/newspaper}
+        \input{sources/newspaper}
 
-In the column, the writer illustrates the extent to which opium addiction is widespread throughout China by making a comparison to the entire British population achieving abstinence to beer and wine. This renders this source extremely useful due not only to its unsettling content, but also due to the high and established status of the writer.
+        In the column, the writer illustrates the extent to which opium addiction is widespread throughout China by making a comparison to the entire British population achieving abstinence to beer and wine. This renders this source extremely useful due not only to its unsettling content, but also due to the high and established status of the writer.
 
-Written over twenty years since the conclusion of the \textit{Second Opium War}\footnotemark, this article explains how morality cannot be achieved by mere legislation by either nation, but instead must come from the desires of the population. While much of the column is spent discussing the trade from a financial and economics point-of-view, such that the writer explains why the revenue generated from the trade is incredibly unreliable and unsustainable, the points raised regarding the social implications greatly compliment the usefulness of the document when analysing the reasons of the Qing dynasty's demise.
+        Written over twenty years since the conclusion of the \textit{Second Opium War}\footnotemark, this article explains how morality cannot be achieved by mere legislation by either nation, but instead must come from the desires of the population. While much of the column is spent discussing the trade from a financial and economics point-of-view, such that the writer explains why the revenue generated from the trade is incredibly unreliable and unsustainable, the points raised regarding the social implications greatly compliment the usefulness of the document when analysing the reasons of the Qing dynasty's demise.
 
-\footnotetext{The \textit{Second Opium War} was fought just over four years from \nth{8} October 1856, to \nth{24} October 1860 and had a subject matter rather unrelated to the opium trade. It was initially caused by Chinese officials boarding the Hong Kong/British ship, the \textit{Arrow}, and removing twelve Chinese men
-\autocite{Wong:2002}; this is now known as the \textit{Arrow incident}
-\autocite{Wong:1974}. Eventually resolved by the \textit{Treaty of Tientsin}, in which concessions were granted to the Western nations of Russia, France, the United Kingdom, and the United States
-\autocite{Nield:2015}, the so-called ``unequal treaty'' has been described as a continuation to the \textit{Treaty of Nanjing}
-\autocite{Wang:2008}. In particular, Britain were granted rights to station representatives in Beijing
-\autocite{HKPress:1912}, even gaining access to the \textit{Forbidden City}
-\autocite{Dong:2004}. In addition to the revocation of all anti-religious Qing laws
-\autocite{Chassiron:1861}, Russia were also granted the rights to use maritime trading ports
-\autocite{Adamov:1952}.
+        \footnotetext{The \textit{Second Opium War} was fought just over four years from \nth{8} October 1856, to \nth{24} October 1860 and had a subject matter rather unrelated to the opium trade. It was initially caused by Chinese officials boarding the Hong Kong/British ship, the \textit{Arrow}, and removing twelve Chinese men \autocite{Wong:2002}; this is now known as the \textit{Arrow incident} \autocite{Wong:1974}. Eventually resolved by the \textit{Treaty of Tientsin}, in which concessions were granted to the Western nations of Russia, France, the United Kingdom, and the United States \autocite{Nield:2015}, the so-called ``unequal treaty'' has been described as a continuation to the \textit{Treaty of Nanjing} \autocite{Wang:2008}. In particular, Britain were granted rights to station representatives in Beijing \autocite{HKPress:1912}, even gaining access to the \textit{Forbidden City} \autocite{Dong:2004}. In addition to the revocation of all anti-religious Qing laws \autocite{Chassiron:1861}, Russia were also granted the rights to use maritime trading ports \autocite{Adamov:1952}.
 
-Knowledge of the \textit{Treaty of Tientsin} is vital when analysing post-1860 documents, as the ``China proper'' was no longer under the effective control of the Qing, but instead the various aforementioned Western nations.}
+        Knowledge of the \textit{Treaty of Tientsin} is vital when analysing post-1860 documents, as the ``China proper'' was no longer under the effective control of the Qing, but instead the various aforementioned Western nations.}
 
-Whilst the status and identity of the \textit{Special Correspondent}\footnote{The true identity of the \textit{Special Correspondent} has been investigated via personal correspondence with \textit{The Times} reference library, however archival records have proven inconclusive. It is rather safe to assume, by extrapolating from the identities of other contemporary foreign correspondents and inspection of the language used in the article, that the particulars of the \textit{Special Correspondent} are that of a well-educated British-born columnist.} is undoubtedly instrumental when analysing the accuracy and intentions of the document, the content of the column reveals a rather anti-Anglo stance seen by the description, tone, and personification of opium as something to be ``free from'' and ``powerless against''. This anti-patriotic opinion makes the document increasingly useful due to the additional effort required of the writer to adopt, and publish, such a critical view of an official British activity.
+        Whilst the status and identity of the \textit{Special Correspondent}\footnote{The true identity of the \textit{Special Correspondent} has been investigated via personal correspondence with \textit{The Times} reference library, however archival records have proven to not provide a definite identification of the writer. It is rather safe to assume, by extrapolating from certain contemporary documents, that the writer is \textit{Sir James George Scott}. His obituary published on \nth{6} April, 1935 states that he went to ``Tongking as  [the] special correspondent for \textit{The Times} in 1884 to describe the French operations there'' \autocites{TheTimes:1935}{Scott:1885}.} is undoubtedly instrumental when analysing the accuracy and intentions of the document, the content of the column reveals a rather anti-Anglo stance seen by the description, tone, and personification of opium as something to be ``free from'' and ``powerless against''. This anti-patriotic opinion makes the document increasingly useful due to the additional effort required of the writer to adopt, and publish, such a critical view of an official British activity.
 
-Despite not being immediately obvious, the content of the column proves invaluable for the analysis, as it describes an ``enslaved'' general population: a perfect device for a weak and rapidly-declining leadership
-\autocite{Rotberg:2003}. The \textit{Special Correspondent} also cites the missionaries' opinions regarding the extent to which the trade severs any potential relations between Britain and the Qing\footnote{While the \textit{Special Correspondent} accepts this view may be fabricated, he also accepts that it is a convenient excuse often used by Chinese diplomats whom are spiteful of the entire concept of the opium trade.}, with some scholars citing that despite the vast differences in the cultural aspects of the two empires, a positive relationship is necessary for bilateral continued success succeeding the \textit{Unequal Treaties}
-\autocite{Fairbank:1942}. The combination of these factors quickly leads to the conclusion that the already-weakened Qing (as a result of the opium wars) are promptly disintegrating as a result of the declining population-morale in addition to the severing of potentially positive British-Qing relations at a diplomatic level.
+        Despite not being immediately obvious, the content of the column proves invaluable for the analysis, as it describes an ``enslaved'' general population: a perfect device for a weak and rapidly-declining leadership \autocite{Rotberg:2003}. The \textit{Special Correspondent} also cites the missionaries' opinions regarding the extent to which the trade severs any potential relations between Britain and the Qing\footnote{While the \textit{Special Correspondent} accepts this view may be fabricated, he also accepts that it is a convenient excuse often used by Chinese diplomats who are spiteful of the entire concept of the opium trade.}, with some scholars citing that despite the vast differences in the cultural aspects of the two empires, a positive relationship is necessary for bilateral continued success succeeding the \textit{Unequal Treaties} \autocite{Fairbank:1942}. The combination of these factors quickly leads to the conclusion that the already-weakened Qing (as a result of the opium wars) are promptly disintegrating as a result of the declining population-morale in addition to the severing of potentially positive British-Qing relations at a diplomatic level.
 
-Similar to a treaty document, however, any newspaper column suffers the limitations of being a product of the society in which it was produced: Britain: the arguably-primary aggressor. Despite the anti-Anglo and anti-opium stance communicated in the column, it is clear that the \textit{Special Correspondent} largely places the blame of widespread addiction more on the Chinaman himself, rather than the traders acting on behalf of the \textit{East India Company}, claiming they have ``chosen opium''. An empathetic and more realistic viewpoint would be that it is the fault of the Western powers who introduced an unknown substance into a \textit{de-jure} Confucianist
-\autocite{Billioud:2007} nation. While this does not directly effect the reality of the document when analysing the reasons for the Qing downfall, the limitation should certainly be considered when using this document as a descriptor for the general morale within China.
+        Similar to a treaty document, however, any newspaper column suffers the limitations of being a product of the society in which it was produced: Britain: the arguably-primary aggressor. Despite the anti-Anglo and anti-opium stance communicated in the column, it is clear that the \textit{Special Correspondent} largely places the blame of widespread addiction more on the Chinaman himself, rather than the traders acting on behalf of the \textit{East India Company}, claiming they have ``chosen opium''. An empathetic and more realistic viewpoint would be that it is the fault of the Western powers who introduced an unknown substance into a \textit{de-jure} Confucianist \autocite{Billioud:2007} nation. While this does not directly effect the reality of the document when analysing the reasons for the Qing downfall, the limitation should certainly be considered when using this document as a descriptor for the general morale within China.
 
 \section{Analysis of Historians' Perspectives}
 
-Historians are generally divisive on the primary cause of the Qing downfall, however it is a uniformly accepted hypothesis that there were a vast array of causes. A common argument, conforming to the ideas put forward in the introduction, state that the opium wars and the subsequent foreign intervention were the primary causes. While there are many oppositions to this particular hypothesis, there is widespread acceptance that the opium wars, while perhaps not the primary factor, undoubtedly took the role as a significant actor in the dynastic demise.
+        Historians are generally divisive on the primary cause of the Qing downfall, however it is a uniformly accepted hypothesis that there were a vast array of causes. A common argument, conforming to the ideas put forward in the introduction, state that the opium wars and the subsequent foreign intervention were the primary causes. While there are many oppositions to this particular hypothesis, there is widespread acceptance that the opium wars, while perhaps not the primary factor, undoubtedly took the role as a significant actor in the dynastic demise.
 
-\subsection{James T. K. Wu: ``The Impact of the Taiping Rebellion upon the Manchu Fiscal System''}
+        \subsection{James T. K. Wu: ``The Impact of the Taiping Rebellion upon the Manchu Fiscal System''}
 
-Since the early \textit{Zhou} dynasty (c. 1046 century B.C.
-\autocite{Loewe:1999}), the term \textit{Mandate of Heaven} has been used amongst leaders to justify their power
-\autocite{Zhao:2009}, insisting that their leadership and authority is supported by Heaven. Throughout history it has since been stated that natural disasters, such as floods and earthquakes, are sent by Heaven to show a loss of faith in the current emperor, and subsequently, the immediate requirement for a new leader
-\autocite{Elvin:1998}. This is an incredibly important concept when studying the imperialist dynasties of China, as Heaven's endorsement of a dynasty's legitimacy was often central in both their rise to power and eventual demise.
+        Since the early \textit{Zhou} dynasty (c. 1046 century B.C. \autocite{Loewe:1999}), the term \textit{Mandate of Heaven} has been used amongst leaders to justify their power \autocite{Zhao:2009}, insisting that their leadership and authority is supported by Heaven. Throughout history it has since been stated that natural disasters, such as floods and earthquakes, are sent by Heaven to show a loss of faith in the current emperor, and subsequently, the immediate requirement for a new leader \autocite{Elvin:1998}. This is an incredibly important concept when studying the imperialist dynasties of China, as Heaven's endorsement of a dynasty's legitimacy was often central in both their rise to power and eventual demise.
 
-The \textit{Taiping Heavenly Kingdom} was an unrecognised monarchy within China from 1851 to 1864, largely run by a self-proclaimed brother of Jesus Christ
-\autocites{Reilly:2014}{Yap:1954}. Literally translating from its Chinese name \zht{天國} as \textit{[the] Kingdom of Heaven}, its leader, Hong Xiuquan, sought to replace the traditional practices of Confucianism and Buddhism with Christianity
-\autocite{Spence:1996}. Understandably, this quickly led to an anti-Qing rebellion orchestrated by Hong and his supporters. Although the Qing enjoyed victory in 1864, the scar left by what is now known as the \textit{Taiping Rebellion} is often used by scholars as the driving force for presenting alternative hypotheses.
+        The \textit{Taiping Heavenly Kingdom} was an unrecognised monarchy within China from 1851 to 1864, largely run by a self-proclaimed brother of Jesus Christ \autocites{Reilly:2014}{Yap:1954}. Literally translating from its Chinese name \zht{天國} as \textit{[the] Kingdom of Heaven}, its leader, Hong Xiuquan, sought to replace the traditional practices of Confucianism and Buddhism with Christianity \autocite{Spence:1996}. Understandably, this quickly led to an anti-Qing rebellion orchestrated by Hong and his supporters. Although the Qing enjoyed victory in 1864, the scar left by what is now known as the \textit{Taiping Rebellion} is often used by scholars as the driving force for presenting alternative hypotheses. Despite its early origins as developing out of frustration for the Qing's handling of the Western ``invasion'', the \textit{Taiping Rebellion} is generally considered as a separate event which is almost entirely independent of the opium-based conflicts.
 
-\input{sources/wu}
+        \input{sources/wu}
 
-% James T. K. Wu, a member of the \textit{Far-Eastern Institute} in the \textit{University of Washington} published his thesis in 1948 to be read at the annual meeting of the \textit{Pacific Coast Branch of the American Historical Association} in Seattle, Washington.
+        \textit{James T. K. Wu}, a member of the \textit{Far-Eastern Institute} in the \textit{University of Washington}, published his thesis in 1948 to be read at the annual meeting of the \textit{Pacific Coast Branch of the American Historical Association} in Seattle, Washington. The paper is a product of \textit{Modern Chinese History Project} undertaken by the \textit{Far-Eastern and Russian Institute of the University of Washington}. Although of a Chinese heritage, Wu's argument is likely to be free of any unjustified and overtly pro-China and anti-Western elements due to his association with the prestigious \textit{Far-Eastern and Russian Institute}\footnote{The aforementioned \textit{Far-Eastern and Russian Institute} at the \textit{University of Washington} was headed by the prolific \textit{George Edward Taylor}, an expert of the \textit{Taiping Rebellion} and Chinese politics at the time of the Qing's dynastic decline \autocite{Taylor:1999}.}.
+
+        While both on-line and off-line records of \textit{Wu} are incredibly limited, his institution was an extraordinarily well-respected organisation during the last century, being generally regarded as the authoritative source on modern China. It is commonly regarded that although the Qing managed to defeat the rebellion, subsequently ending the \textit{Taiping Heavenly Kingdom}, they only did so at a great cost: further increasing the decentralisation of provisional authority figures, hence granting autonomy to a greater number of ``sub-states'', thus increasing the possibilities of a rebellion not only having the ability to begin, but also to garner large followings without the knowledge of the Qing. In \textit{Wu}'s largely-revisionist theory of the impacts of the \textit{Taiping Rebellion} upon the Manchurian fiscal system\footnote{\textit{Wu} also states in the introduction that due to the simultaneously centralised and decentralised nature of the pre-rebellion Government, China's administrative structure was very difficult to define properly. The sudden decentralisation of the fiscal system allows an easier analysis.}, it is argued that the decentralisation of the enforcement agencies of China's fiscal policy caused the centralised state authorities in Peking/Beijing to lose power over all but the larger cities, in which they were geographically neighbouring.
+
+        This thesis was published in 1948, shortly succeeding the \textit{Second World War} (1939 to 1945) and on the brink of the \textit{Cold War} between Russia and America. With a history of Sino-Soviet relations throughout the very recent years \autocite{Garver:1989}, the animosity towards Russia in America often extended to China. Although not in its prime until the 1950s, \textit{McCarthyism} and \textit{The Red Scare} also contributed towards a general anti-Sino stance with the American populous due to their involvement in the Korean war \autocite{Schrecker:1998}.
+
+        Although the thesis is relatively unlikely to suffer from great extents of exaggeration and deception in comparison to opinions from historians and authors with a more significant level of impartiality, any document which is a product of a society such as America in such a volatile time period must be analysed with the appropriate reservations. It is also critical to recall that America played a much greater role than an innocent bystander in the opium trade and demise of the Qing, as they were one of the key nations who signed an \textit{Unequal Treaty} with the Qing \autocite{Peters:1961}\footnote{Additionally, it should be mentioned that in article eleven of the American \textit{Treaty of Tientsin} with the Qing, it is stated that all American citizens are granted the right to roam freely throughout the entirety of China for both business and pleasure, providing they possessed a valid passport.} succeeding the \textit{Second Opium War} \autocite{Johnstone:1937}.
 
 \pagebreak
 \printbibliography[title={Cited Works}, heading=bibintoc]
 
 \end{document}
+
