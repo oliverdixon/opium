@@ -13,6 +13,11 @@
 % \SetWatermarkScale{2}
 % \SetWatermarkLightness{0.8}
 
+% --- WORD COUNTS --- %
+
+\newcommand{\wordcount}{TODO} % TODO
+\newcommand{\wordcountabstract}{TODO} % TODO
+
 % --- BIBLIOGRAPHY SET-UP --- %
 
 \usepackage[
@@ -63,12 +68,11 @@
 % thin horizontal line spanning the width of text
 \newcommand{\textrule}{\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}}
 
-\newcommand{\articlehead}[1]{%
-	\vspace*{0.5em}
-	\begin{center}
-		\textsc{#1}
-	\end{center}
-	\vspace*{0.5em}
+\newcommand{\articlehead}[1]{
+        \noindent
+        \qquad
+        \textbf{#1}
+        \qquad
 }
 
 \newenvironment{fancyquote}
@@ -309,6 +313,7 @@ nation'' \autocite{Mao:2018}. The following extract is from the thirteen-article
 treaty, highlighting the most significant elements.
 
 \input{sources/nanjing} % TREATY OF NANJING, TeX-EMBED
+\pagebreak % special case, will almost-certainly get removed
 
 The treaty, signed \nth{29} August 1842 to come into effect on \nth{26} June
 1843 \autocite{Saw:1975}, possesses unparalleled potential usage when conducting
@@ -664,7 +669,16 @@ Washington} cannot match in a modern analysis of such controversial events.
 Because of this, the initial argument outlined in the introduction is
 maintained.
 
-\pagebreak \printbibliography[title={Cited Works}, heading=bibintoc]
+\pagebreak
+
+\defbibnote{bib-wc}{%
+        \textbf{%
+                Word Count, including abstract: \wordcount\\
+                Word Count, excluding abstract: \wordcountabstract%
+        }
+}
+
+\printbibliography[title={Cited Works}, heading=bibintoc, postnote=bib-wc]
 
 \end{document}
 
