@@ -6,17 +6,15 @@
 
 \usepackage[a4paper, total={6in, 10in}]{geometry}
 \usepackage[bottom]{footmisc} % make footnotes look like footnotes
-\usepackage[super]{nth}
-\usepackage{graphicx,mdframed,xcolor,indentfirst,fancyhdr,titling,CJKutf8}
-
-% \usepackage[firstpage]{draftwatermark}
-% \SetWatermarkScale{2}
-% \SetWatermarkLightness{0.8}
+\usepackage[super]{nth} % place "st", "nd", "rd", "th", etc. in the superscript
+\usepackage{graphicx,mdframed,xcolor} % frame environments and Chinese decor
+\usepackage{indentfirst} % indent new paragraphs
+\usepackage{CJKutf8} % Japanese and Chinese text (see \jap, \zht, and \zhs)
 
 % --- WORD COUNTS --- %
 
-\newcommand{\wordcount}{TODO} % TODO
-\newcommand{\wordcountabstract}{TODO} % TODO
+\newcommand{\wordcount}{3649}
+\newcommand{\wordcountabstract}{3627}
 
 % --- BIBLIOGRAPHY SET-UP --- %
 
@@ -66,8 +64,14 @@
 % --- ENVIRONMENT AND COMMAND SET-UP --- %
 
 % thin horizontal line spanning the width of text
-\newcommand{\textrule}{\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}}
+\newcommand{\textrule}{%
+        \noindent
+        \makebox[\linewidth]{
+                \rule{\linewidth}{0.4pt}
+        }%
+}
 
+% intended for printing headers for multiple-heading sources
 \newcommand{\articlehead}[1]{
         \noindent
         \qquad
@@ -75,6 +79,7 @@
         \qquad
 }
 
+% quote in a light grey frame, localising footnotes
 \newenvironment{fancyquote}
 	{
 		\begin{mdframed}[linecolor=lightgray]
@@ -88,6 +93,8 @@
 \setlength{\footnotesep}{1em}
 
 % --- FANCYHDR SET-UP --- %
+
+\usepackage{fancyhdr,titling}
 
 \fancypagestyle{stdhdr}{%
 	\fancyhf{}
@@ -314,8 +321,8 @@ in both governmental and non-governmental documents since the 1970s
 even in modern texts however, as their occurrence has become popular in the
 West.}, was a treaty between Britain and the Qing to end the \textit{First Opium
 War}. The general consensus regarding the treaty states that despite its
-undebatable harshness and inequality, the Qing representative (Qingyi) had no
-choice but to sign the agreement due to the their status as a ``defeated
+undebatable harshness and inequality, the Qing representative (\textit{Qingyi})
+had no choice but to sign the agreement due to the their status as a ``defeated
 nation'' \autocite{Mao:2018}. The following extract is from the thirteen-article
 treaty, highlighting the most significant elements.
 
@@ -675,21 +682,22 @@ him of a prestige which \textit{Wu} and the 1948 \textit{University of
 Washington} cannot match in a modern analysis of such controversial events.
 Because of this, the initial argument outlined in the introduction is
 maintained, such that while it is not suggested nor implied that the opium wars
-were the sole factor leading to the Qing's dynastic decline, the extraordinary
-amount of evidence, both from historians and contemporary documents
-communicating the magnitude of the conflicts, allows a logical conclusion to be
-reached that they were the clear primary factor.
+were the sole or `final' factor leading to the Qing's dynastic decline, the
+extraordinary amount of evidence, both from historians and contemporary
+documents communicating the magnitude of the conflicts, allows a logical
+conclusion to be reached that they were the clear primary factor.
+
+\vfill
+\noindent\ignorespacesafterend%
+\textbf{%
+        Word Count, including abstract: \wordcount\\
+        Word Count, excluding abstract: \wordcountabstract\\[1em]
+}
+Verbatim sources, footnotes, and the bibliography have been omitted from the
+word count.
 
 \pagebreak
-
-\defbibnote{bib-wc}{%
-        \textbf{%
-                Word Count, including abstract: \wordcount\\
-                Word Count, excluding abstract: \wordcountabstract%
-        }
-}
-
-\printbibliography[title={Cited Works}, heading=bibintoc, postnote=bib-wc]
+\printbibliography[title={Cited Works}, heading=bibintoc]
 
 \end{document}
 
