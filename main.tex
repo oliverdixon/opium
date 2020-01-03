@@ -83,6 +83,11 @@
 	allcolors = {blue}
 }
 
+\makeatletter % see hyperref manual sec. 11.3
+\providecommand*{\toclevel@titlemarker}{0}
+\providecommand*{\toclevel@contentmarker}{1}
+\makeatother
+
 % --- ENVIRONMENT AND COMMAND SET-UP --- %
 
 % thin horizontal line spanning the width of text
@@ -121,6 +126,7 @@
 \clearpage\maketitle
 \thispagestyle{titlehdr}
 \pagestyle{stdhdr}
+\addcontentsline{toc}{titlemarker}{Opium Wars Historical Analysis, O. Dixon}
 
 \vspace*{-1.5em}
 \begin{figure}[h!]
@@ -180,6 +186,8 @@
 \textrule%
 \vspace*{0.6em}
 
+\phantomsection%
+\addcontentsline{toc}{contentmarker}{Historical Analysis Content}
 From the exposure of the weaknesses in the Qing military to the
 anti-imperialist and anti-feudalism domestic rebellions, it is clear that the
 Opium wars only ever existed as a subset of the immediate issues threatening
@@ -531,6 +539,25 @@ entirely autonomous, and that the literal intervention from Britain acted as an
 undoubtedly critical but merely initial catalyst for the bourgeois-based
 revolution.}.
 
+This argument, in general, is highly convincing. The end of the \textit{Second
+Opium War} in 1860 and subsequent \textit{Treaty of Tienstin} marked the end of
+large-scale violent conflicts between the nations, and China shifted their focus
+towards attempts to influence the powers which now inhibited their lands, as
+opposed to directly engaging them for absolute control. Aside from the issues
+which arose from the \textit{Boxer Rebellion} and \textit{First Sino-Japanese
+War}, the domestic `damage-control' implemented as attempts to allow China to
+heal from the events of the preceding century, can be seen with the 1906
+ten-year opium eradication plan
+\autocites{Trocki:1999}{Owen:1934}\footnote{Despite the Britain-Qing armed
+conflicts coming to an effective end with the \textit{Treaty of Tienstin}, the
+opium epidemic was by no means over. Even in central Beijing, a now-anonymous
+French artist and traveller with the \textit{Soci\'et\'e de Saint-Augustin}
+described the prevalence of opium as recent as 1896, recording the existence of
+\textit{une fumerie d'opium} [opium-smoking `dens'], with opium being
+commonplace in tobacco shops throughout the city \autocite{FrenchArtist:1896}.
+This shows the absolute lack of control which the central Chinese authorities
+realistically possessed over their own capital.}.
+
 \input{sources/motono} % MOTONO ARGUMENT, TeX-EMBED
 
 \textit{Eiichi Motono}, native name \jap{本野英一}, is a Japanese professor in
@@ -574,7 +601,7 @@ British, dissatisfied with the legitimacy of the Qing legal system, decided to
 place select Britons in the court of the Qing. The aforementioned mistrust of
 the Qing legal system likely arises from the controversial 1784 case in which a
 Briton working on behalf of the \textit{East India Company} was executed as a
-result of accidentally killing a Chinese \autocite{Cassel:2012}.}.
+result of accidentally killing a Chinaman \autocite{Cassel:2012}.}.
 
 In the light of his major contributions to various international journals in
 addition to the authorship of several books covering a large variety of modern
@@ -650,7 +677,7 @@ Government, China's administrative structure was very difficult to define
 properly. The sudden decentralisation of the fiscal system allows for an easier
 analysis.}, it is argued that the decentralisation of the enforcement agencies
 of China's fiscal policy caused the centralised state authorities in
-Peking/Beijing to lose power over all but the larger cities, in which they were
+Peking/Beijing to lose power over all but the larger cities, which they were
 geographically neighbouring.
 
 This thesis was published in 1948, shortly succeeding the \textit{Second World
@@ -716,6 +743,7 @@ Verbatim sources, footnotes, and the bibliography have been omitted from the
 word count.
 
 \pagebreak
+\setcounter{tocdepth}{1}
 \printbibliography[title={Cited Works}, heading=bibintoc]
 
 \end{document}
