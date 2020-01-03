@@ -2,6 +2,10 @@
 % in the Years 1814-1912" Oliver Dixon, History Coursework Dissertation LaTeX
 % source (designed for PDFLaTeX)
 
+% I want to re-align this to one-hundred columns, as opposed to eighty, but
+% that's unlikely to ever happen due to the difficulties that re-typing the
+% bibliography would ensue.
+
 \documentclass[a4paper,oneside]{article}
 
 \usepackage[a4paper, total={6in, 10in}]{geometry}
@@ -11,7 +15,7 @@
 \usepackage{indentfirst} % indent new paragraphs
 \usepackage{CJKutf8} % Japanese and Chinese text (see \jap, \zht, and \zhs)
 
-% --- WORD COUNTS --- %
+% --- WORD COUNTS TODO --- %
 
 \newcommand{\wordcount}{3649}
 \newcommand{\wordcountabstract}{3627}
@@ -53,7 +57,25 @@
         \end{CJK*}
 }
 
-% --- HYPERREF IMPORT AND SET-UP --- %
+% --- FANCYHDR --- %
+
+\usepackage{fancyhdr,titling}
+\usepackage{lastpage}
+
+\fancypagestyle{stdhdr}{%
+	\fancyhf{}
+	\fancyhead[R]{\theauthor}
+        \fancyhead[L]{\textit{A.Q.A. A-Level History} Non-Examined Assessment}
+        \fancyfoot[L]{\textbf{Final Draft Copy --- \today}}
+        \fancyfoot[R]{Page \thepage{} of~\pageref*{LastPage}}
+}
+
+\fancypagestyle{titlehdr}{%
+	\fancyhead{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+% --- HYPERREF --- %
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -85,27 +107,10 @@
 \emergencystretch=1em
 \setlength{\footnotesep}{1em}
 
-% --- FANCYHDR SET-UP --- %
-
-\usepackage{fancyhdr,titling}
-
-\fancypagestyle{stdhdr}{%
-	\fancyhf{}
-	\fancyhead[R]{\theauthor}
-        \fancyhead[L]{\textit{A.Q.A. A-Level History} Non-Examined Assessment}
-        \fancyfoot[L]{\textbf{Draft Copy --- \today}}
-	\fancyfoot[R]{Page \thepage}
-}
-
-\fancypagestyle{titlehdr}{%
-	\fancyhead{}
-	\renewcommand{\headrulewidth}{0pt}
-}
-
 \title{``\emph{The Opium Wars were the Primary Reason for the Downfall of the
         Qing Dynasty in the Years 1814 to 1912}'' --- A Historical Analysis}
 \author{Oliver Dixon}
-\date{Summer, 2019}
+\date{Summer, 2019--January, 2020}
 
 % ---------------------- %
 % --- DOCUMENT START --- %
@@ -126,7 +131,6 @@
 \vspace*{-0.5em}
 
 \begin{abstract}
-
         Succeeding the Ming dynasty, the great Qing dynasty ruled from 1644 to
         1912, achieving the most significant strides ever witnessed on the
         Chinese political spectrum. Aside from doubling the land under the
@@ -139,14 +143,14 @@
         that although these ethnic groups were ``encapsulated'', they were by no
         means assimilated.  This view was originally proposed by \textit{Rawski}
         in her 1996 thesis \autocite{Rawski:1996}, however is now a commonplace
-        opinion \autocite{Hou:2014}.} of ethnicities within the Chinese state
-        \autocite{Rowe:2012}, the dynasty enjoyed economic superiority of
-        proportions that Europe, the Americas, and their other Asian neighbours
-        could only imagine \autocite{Maddison:2007}. Despite their initial
-        prosperity and success as an irreplaceable and integral element of the
-        rapidly-increasing worldwide economy, the Qing empire suffered the fate
-        of taking the place as the final imperial dynasty of China due to an
-        array of factors, both international and domestic.
+        opinion amongst scholars \autocite{Hou:2014}.} of ethnicities within the
+        Chinese state \autocite{Rowe:2012}, the dynasty enjoyed economic
+        superiority of proportions that Europe, the Americas, and their other
+        Asian neighbours could only imagine \autocite{Maddison:2007}. Despite
+        their initial prosperity and success as an irreplaceable and integral
+        element of the rapidly-increasing worldwide economy, the Qing empire
+        suffered the fate of taking the place as the final imperial dynasty of
+        China due to an array of factors, both international and domestic.
 
         Towards the end of the dynasty, emergency reforms were passed in
         fruitless attempts of strengthening the China proper by means of
@@ -164,7 +168,6 @@
         will be the extent to which the strained international trade relations
         with the \textit{East India Company} and the ensuing Opium wars
         contributed to the ultimate demise of 1912.
-
 \end{abstract}
 
 \textrule%
@@ -206,14 +209,15 @@ military offensive launched by the cocaine cartels of Columbia
 \autocite{Hanes:2004}.} in the making of modern China that it would be improper
 to suggest they were anything other than the primary causes.
 
-The \textit{First Opium War} initiated a state of mass-unrest throughout the
-region, invoking what some have called a ``Chinese people's bourgeois-democratic
-revolution against imperialism and feudalism'' \autocite{Janin:1999}, which is
-incredibly threatening due to its direct contradiction with the principles and
-philosophies of the imperialist Qing. Various wars fought between the Qing
-empire and Western powers ultimately led to what are now referred to as the
-\textit{Unequal Treaties}, in which the Qing was diplomatically forced to sign a
-series of unfavourable agreements with the Western powers \autocite{Wang:2005}.
+The \textit{First Opium War} (1839--1842) initiated a state of mass-unrest
+throughout the region, invoking what some have called a ``Chinese people's
+bourgeois-democratic revolution against imperialism and feudalism''
+\autocite{Janin:1999}, which is incredibly threatening due to its direct
+contradiction with the principles and philosophies of the imperialist Qing.
+Various wars fought between the Qing empire and Western powers ultimately led to
+what are now referred to as the \textit{Unequal Treaties}, in which the Qing was
+diplomatically forced to sign a series of unfavourable agreements with the
+Western powers \autocite{Wang:2005}.
 
 Additionally, some have argued that the importation of opium and ensuing wars
 were not directly attributable for the downfall of the empire, but rather the
@@ -224,7 +228,7 @@ considered to be included in the series of \textit{Unequal Treaties} imposed
 upon the Qing\footnote{The nations involved in the anti-Qing alliance were
 Japan, Britain, France, the United States, Russia, Germany, Italy, and
 Austria-Hungary. They were also supported by Australian and Indian forces of the
-British empire \autocite{Gardener:2016}.}, the protocol was the driving force
+British Empire \autocite{Gardener:2016}.}, the protocol was the driving force
 which ultimately ``[brought] the Great dynasty to its knees'' due to crippling
 debt \autocite{Mitchell:2008}.
 
@@ -298,10 +302,18 @@ high-ranking member of the Qing dynasty, having a strong inclination to
 exaggerate the effects of British presence in China in order to appease the
 Emperor, however the majority of his writings are known to be factual to a
 rather striking degree due to the extensive number of other contemporary records
-concerning the severity of opium.
+concerning the severity of opium.  In this particular case of attempted
+diplomacy, it is a matter of debate as to whether \textit{Queen Victoria} ever
+read the letter.
 
-In this particular case of attempted diplomacy, it is a matter of debate as to
-whether \textit{Queen Victoria} ever read the letter.
+This specific communication supports the hypothesis outlined in the outset,
+concerning the loss of Chinese identity and its effect on the downfall of the
+Qing, due to its status as the first-known piece of communication written to a
+foreign `enemy' in such a personalised manner. Due to \textit{Lin}'s
+exemplification of the levels to which the smoking of opium had already affected
+Chinese society, morale, and sense of national identity, it can be directly
+inferred that this letter, and thus the `beginning' of the measurable fall of
+the Qing, was caused by the aforementioned factors confering identity.
 
 Moving towards documents with greater formality, the level of which the opium
 wars affected the Qing remain startlingly apparent. Often hailed as a
@@ -373,7 +385,11 @@ aforementioned privileges and maintains absolutely no implication of a forceful
 signing. Hence, while this invaluable document explains the reality of the legal
 situation, it cannot be used as a descriptor for an analysis into the morale of
 the Chinese population toward the Qing: a rather significant element in their
-ultimate downfall.
+ultimate downfall. This limitation also affects the extent to which the document
+could be used as part of the historical analysis, as the analysis focuses
+almost-exclusively upon the sentiments of the Chinese population-at-large during
+the time of Qing-\textit{E.I.C.} intercourse, and thus is affected by the
+opinions and morale of the Chinese nationals.
 
 An exemplar of this concerns the clause regarding the cession of Hong Kong. In
 the Chinese text, it is euphemistically stated that ``the emperor graciously
@@ -396,38 +412,42 @@ population achieving abstinence to beer and wine. This renders this source
 extremely useful due not only to its unsettling content, but also due to the
 high and established status of the writer.
 
-Written over twenty years since the conclusion of the \textit{Second Opium
-War}\footnotemark, this article explains how morality cannot be achieved by mere
-legislation by either nation, but instead must come from the desires of the
-population. While much of the column is spent discussing the trade from a
+Written over twenty years since the conclusion of the \textit{Second Opium War}
+(1856--1860)\footnotemark, this article explains how morality cannot be achieved
+by mere legislation by either nation, but instead must come from the desires of
+the population. While much of the column is spent discussing the trade from a
 financial and economics point-of-view, such that the writer explains why the
 revenue generated from the trade is incredibly unreliable and unsustainable, the
 points raised regarding the social implications greatly compliment the
 usefulness of the document when analysing the reasons of the Qing dynasty's
 demise.
 
-\footnotetext{The \textit{Second Opium War} was fought just over four years from
-\nth{8} October 1856, to \nth{24} October 1860 and had a subject matter rather
-unrelated to the opium trade. It was initially caused by Chinese officials
-boarding the Hong Kong/British ship, the \textit{Arrow}, and removing twelve
-Chinese men \autocite{Wong:2002}; this is now known as the \textit{Arrow
-incident} \autocite{Wong:1974}.  The Canton officials later claimed that it was
-due to the \textit{Arrow} ship being accused of piracy, however in actuality,
-they simply tore down the British flag and forced the vessel to effectively
-surrender \autocite{Feige:2008}. Eventually resolved by the \textit{Treaty of
-Tientsin}, in which concessions were granted to the Western nations of Russia,
-France, the United Kingdom, and the United States \autocite{Nield:2015}, the
-so-called ``unequal treaty'' has been described as a continuation to the
-\textit{Treaty of Nanjing} \autocite{Wang:2008}. In particular, Britain were
-granted rights to station representatives in Beijing \autocite{HKPress:1912},
-even gaining access to the \textit{Forbidden City} \autocite{Dong:2004}. In
-addition to the revocation of all anti-religious Qing laws
-\autocite{Chassiron:1861}, Russia were also granted the rights to use maritime
-trading ports \autocite{Adamov:1952}.
+\footnotetext{%
+        The \textit{Second Opium War} was fought just over four years from
+        \nth{8} October 1856, to \nth{24} October 1860 and had a subject matter
+        rather unrelated to the opium trade. It was initially caused by Chinese
+        officials boarding the Hong Kong/British ship, the \textit{Arrow}, and
+        removing twelve Chinese men \autocite{Wong:2002}; this is now known as
+        the \textit{Arrow incident} \autocite{Wong:1974}.  The Canton officials
+        later claimed that it was due to the \textit{Arrow} ship being accused
+        of piracy, however in actuality, they simply tore down the British flag
+        and forced the vessel to effectively surrender \autocite{Feige:2008}.
+        Eventually resolved by the \textit{Treaty of Tientsin}, in which
+        concessions were granted to the Western nations of Russia, France, the
+        United Kingdom, and the United States \autocite{Nield:2015}, the
+        so-called ``unequal treaty'' has been described as a continuation to the
+        \textit{Treaty of Nanjing} \autocite{Wang:2008}. In particular, Britain
+        were granted rights to station representatives in Beijing
+        \autocite{HKPress:1912}, even gaining access to the \textit{Forbidden
+        City} \autocite{Dong:2004}. In addition to the revocation of all
+        anti-religious Qing laws \autocite{Chassiron:1861}, Russia were also
+        granted the rights to use maritime trading ports \autocite{Adamov:1952}.
 
-Knowledge of the \textit{Treaty of Tientsin} is vital when analysing post-1860
-documents, as the ``China proper'' was no longer under the effective control of
-the Qing, but instead the various aforementioned Western nations.}
+        Knowledge of the \textit{Treaty of Tientsin} is vital when analysing
+        post-1860 documents, as the ``China proper'' was no longer under the
+        effective control of the Qing, but instead the various aforementioned
+        Western nations.
+}
 
 Whilst the status and identity of the \textit{Special
 Correspondent}\footnotemark{} is undoubtedly instrumental when analysing the
@@ -438,15 +458,17 @@ anti-patriotic opinion makes the document increasingly useful due to the
 additional effort required of the writer to adopt, and publish, such a critical
 view of an official British activity.
 
-\footnotetext{The true identity of the \textit{Special Correspondent}
-has been investigated via personal correspondence with \textit{The Times}
-reference library, however archival records have proven to not provide a
-definite identification of the writer. It is rather safe to assume, by
-extrapolating from certain contemporary documents, that the writer is
-\textit{Sir James George Scott}. His obituary published on \nth{6} April, 1935
-states that he went to ``Tongking as  [the] special correspondent for
-\textit{The Times} in 1884 to describe the French operations there''
-\autocites{TheTimes:1935}{Scott:1885}.} 
+\footnotetext{%
+        The true identity of the \textit{Special Correspondent} has been
+        investigated via personal correspondence with \textit{The Times}
+        reference library, however archival records have proven to not provide a
+        definite identification of the writer. It is rather safe to assume, by
+        extrapolating from certain contemporary documents, that the writer is
+        \textit{Sir James George Scott}. His obituary published on \nth{6}
+        April, 1935 states that he went to ``Tongking as  [the] special
+        correspondent for \textit{The Times} in 1884 to describe the French
+        operations there'' \autocites{TheTimes:1935}{Scott:1885}.
+} 
 
 Despite not being immediately obvious, the content of the column proves
 invaluable for the analysis, as it describes an ``enslaved'' general population:
