@@ -2,10 +2,6 @@
 % in the Years 1814-1912" Oliver Dixon, History Coursework Dissertation LaTeX
 % source (designed for PDFLaTeX)
 
-% I want to re-align this to one-hundred columns, as opposed to eighty, but
-% that's unlikely to ever happen due to the difficulties that re-typing the
-% bibliography would ensue.
-
 \documentclass[a4paper,oneside]{article}
 
 \usepackage[a4paper, total={6in, 10in}]{geometry}
@@ -14,6 +10,7 @@
 \usepackage{graphicx,mdframed,xcolor} % frame environments and Chinese decor
 \usepackage{indentfirst} % indent new paragraphs
 \usepackage{CJKutf8} % Japanese and Chinese text (see \jap, \zht, and \zhs)
+\usepackage[OT2,T1]{fontenc} % Cyrillic Text (see \textcyr)
 
 % --- WORD COUNTS TODO --- %
 
@@ -55,6 +52,10 @@
                 \normalfont%
                 #1
         \end{CJK*}
+}
+
+\newcommand{\textcyr}[1]{% Cyrillic (transliteration from Latin)
+        {\fontencoding{OT2}\fontfamily{wncyr}\selectfont #1}
 }
 
 % --- FANCYHDR --- %
@@ -191,7 +192,7 @@
 From the exposure of the weaknesses in the Qing military to the
 anti-imperialist and anti-feudalism domestic rebellions, it is clear that the
 Opium wars only ever existed as a subset of the immediate issues threatening
-the Great dynasty.  Despite \textit{Emperor Jiaqing} issuing an anti-opium
+the Great dynasty. Despite \textit{Emperor Jiaqing} issuing an anti-opium
 edict\footnote{A small extract from \textit{Jiaqing}'s condemnation of the
 \textit{East India Company} reads ``As for opium, it is poisonous to the
 greatest extreme, and those who have taken it are all wicked and unscrupulous
@@ -199,14 +200,19 @@ without exception''. Speaking in 1814, it is clear that his words had little
 effect on the actions of the traders.} in 1814 \autocite{Hu:1991}, the
 ever-diminishing national identity\footnote{According to contemporary British
 travellers to China, a true Chinaman often despised all other nations than his
-own, while considering foreigners to be ``barbarians''
-\autocite{McPherson:1842}.  These notes were published in the midst of the
-\textit{First Opium War} however, hence the general animosity towards
-foreigners was likely to have been understandably at its peak during the
-traveller's expedition.} in the face of foreign intervention is undoubtedly a
-significant factor when inspecting the ultimate demise of China's final
-dynasty, however the somewhat-inadvertent internationalisation efforts of the
-global powerhouse cannot be solely attributed to the onset of the opium wars.
+own, considering foreigners to be ``barbarians'' \autocite{McPherson:1842}.
+These notes were published in the midst of the \textit{First Opium War} however,
+hence the general animosity towards foreigners was likely to have been
+understandably at its peak during the traveller's expedition.} in the face of
+foreign intervention is undoubtedly a significant factor when inspecting the
+ultimate demise of China's final dynasty, however the somewhat-inadvertent
+internationalisation efforts of the global powerhouse cannot be solely
+attributed to the onset of the opium wars. For this particular analysis, it is
+critical to recall that China has long-suffered from issues of a diminishing
+national identity, and there has been growing confusion throughout the populous
+of what it means to `be' Chinese; this is exemplified by the fact that
+throughout the past seven centuries, China has been ruled, more than half the
+time, by non-Chinese emperors \autocite{Fairbank:1957}.
 
 Despite not existing as a sole catalyst for the Qing downfall, the opium wars
 bore such significance\footnote{Historians \textit{William Travis Hanes III},
