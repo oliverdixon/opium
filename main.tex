@@ -10,7 +10,6 @@
 \usepackage{graphicx,mdframed,xcolor} % frame environments and Chinese decor
 \usepackage{indentfirst} % indent new paragraphs
 \usepackage{CJKutf8} % Japanese and Chinese text (see \jap, \zht, and \zhs)
-\usepackage[OT2,T1]{fontenc} % Cyrillic Text (see \textcyr)
 
 % --- WORD COUNTS TODO --- %
 
@@ -52,10 +51,6 @@
                 \normalfont%
                 #1
         \end{CJK*}
-}
-
-\newcommand{\textcyr}[1]{% Cyrillic (transliteration from Latin)
-        {\fontencoding{OT2}\fontfamily{cmr}\selectfont #1}
 }
 
 % --- FANCYHDR --- %
