@@ -1,5 +1,4 @@
-# "The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty
-# in the Years 1814-1912"
+# "The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty in the Years 1814-1912"
 History A-level Dissertation
 
 NOTE: The majority of commits in this repository are unsigned; this is due to a
