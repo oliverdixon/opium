@@ -1,61 +1,45 @@
 % "The Opium Wars were the Primary Reason for the Downfall of the Qing Dynasty
 % in the Years 1814-1912" Oliver Dixon, History Coursework Dissertation LaTeX
-% source (designed for PDFLaTeX)
+% source (designed for XeLateX)
 
-\documentclass[a4paper,oneside]{article}
+\documentclass{article}
 
-\usepackage[a4paper, total={6in, 10in}]{geometry}
-\usepackage[bottom]{footmisc} % make footnotes look like footnotes
-\usepackage[super]{nth} % place "st", "nd", "rd", "th", etc. in the superscript
-\usepackage{graphicx,mdframed,xcolor} % frame environments and Chinese decor
-\usepackage{indentfirst} % indent new paragraphs
-\usepackage{CJKutf8} % Japanese and Chinese text (see \jap, \zht, and \zhs)
+\usepackage[a4paper]{geometry}
+\usepackage[bottom]{footmisc} % Push footnotes to the bottom of the page
+\usepackage[super]{nth} % Place cardinal markers in the superscript
+\usepackage{graphicx,mdframed,xcolor} % Frame environments and Chinese decor
+\usepackage{indentfirst} % Indent new paragraphs
+\usepackage{xeCJK} % XeLaTeX: Enable CJK support
+\usepackage{setspace} % Custom line spacing
+\usepackage{fancyhdr,titling,lastpage} % Header and page metadata
+\usepackage{polyglossia} % Cyrillic text
 
-% --- WORD COUNTS --- %
+\setmainfont[UprightFont = *, %
+        ItalicFont = * Slanted, %
+        SmallCapsFont = * Caps]{Latin Modern Roman}
+\setCJKmainfont[UprightFont = * SC, %
+        ItalicFont = * JP]{Noto Serif CJK}
+\setCJKmonofont{Noto Serif CJK TC}
+\newfontfamily\russianfont{Liberation Serif}[Script=Cyrillic]
+\setdefaultlanguage{english}
+\setotherlanguage{russian}
+
+\setstretch{1.1}
 
 \newcommand{\wordcount}{4480}
 
-% --- BIBLIOGRAPHY SET-UP --- %
-
 \usepackage[
-	backend=biber,
-	sorting=none,
-	bibencoding=utf8,
-	style=alphabetic
+	backend=biber, %
+	sorting=none, %
+	bibencoding=utf8, %
+	style=alphabetic %
 ]{biblatex}
 
 \addbibresource{main.bib}
 
-% Break long U.R.L.s which do not contain breaking characters
-% -- from https://tex.stackexchange.com/a/134281
+% Break long URLs which do not contain breaking characters
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
-
-\newcommand{\jap}[1]{% Japanese
-        \begin{CJK*}{UTF8}{min}%
-                \normalfont%
-                #1
-        \end{CJK*}
-}
-
-\newcommand{\zht}[1]{% Traditional Chinese
-        \begin{CJK*}{UTF8}{bsmi}%
-                \normalfont%
-                #1
-        \end{CJK*}
-}
-
-\newcommand{\zhs}[1]{% Simplified Chinese
-        \begin{CJK*}{UTF8}{gbsn}%
-                \normalfont%
-                #1
-        \end{CJK*}
-}
-
-% --- FANCYHDR --- %
-
-\usepackage{fancyhdr,titling}
-\usepackage{lastpage}
 
 \fancypagestyle{stdhdr}{%
 	\fancyhf{}
@@ -70,22 +54,19 @@
 	\renewcommand{\headrulewidth}{0pt}
 }
 
-% --- HYPERREF --- %
+\usepackage[
+        colorlinks = true, %
+        allcolors = blue, %
+]{hyperref}
 
-\usepackage{hyperref}
-\hypersetup{%
-	colorlinks = true,
-	allcolors = {blue}
-}
-
-\makeatletter % see hyperref manual sec. 11.3
+\makeatletter
 \providecommand*{\toclevel@titlemarker}{0}
 \providecommand*{\toclevel@contentmarker}{1}
 \makeatother
 
 % --- ENVIRONMENT AND COMMAND SET-UP --- %
 
-% thin horizontal line spanning the width of text
+% Thin horizontal line spanning the width of text
 \newcommand{\textrule}{%
         \noindent
         \makebox[\linewidth]{
@@ -93,7 +74,7 @@
         }%
 }
 
-% intended for printing headers for multiple-heading sources
+% Intended for printing headers for multiple-heading sources
 \newcommand{\articlehead}[1]{
         \noindent
         \qquad
@@ -103,7 +84,6 @@
 
 \mdfdefinestyle{fancyquote}{linecolor=lightgray}
 
-% \tolerance=10000 % "infinite" tolerance (see TeXBook page 29)
 \emergencystretch=1em
 \setlength{\footnotesep}{1em}
 
@@ -130,6 +110,12 @@
 \end{figure}
 \vspace*{-0.5em}
 
+\begin{center}
+        \textsc{This ``Non-Examined Assessment'' Document is Presented as
+        Partial Fulfilment of the \textit{A.Q.A. A-Level History}
+        Qualification.}
+\end{center}
+
 \begin{abstract}
         Succeeding the Ming dynasty, the great Qing dynasty ruled from 1644 to
         1912, achieving the most significant strides ever witnessed on the
@@ -148,7 +134,7 @@
         superiority of proportions that Europe, the Americas, and their other
         Asian neighbours could only imagine \autocite{Maddison:2007}. Despite
         their initial prosperity and success as an irreplaceable and integral
-        element of the rapidly-increasing worldwide economy, the Qing empire
+        element of the rapidly increasing worldwide economy, the Qing empire
         suffered the fate of taking the place as the final imperial dynasty of
         China due to an array of factors, both international and domestic.
 
@@ -169,16 +155,6 @@
         with the \textit{East India Company} and the ensuing Opium wars
         contributed to the ultimate demise of 1912.
 \end{abstract}
-
-\textrule%
-\vspace*{0.6em}
-{
-        \centering \textsc{This ``Non-Examined Assessment'' Document is
-        Presented as Partial Fulfilment of the \textit{A.Q.A. A-Level History}
-        Qualification}\\
-}
-\textrule%
-\vspace*{0.6em}
 
 \phantomsection%
 \addcontentsline{toc}{contentmarker}{Historical Analysis Content}
@@ -243,7 +219,7 @@ However, it would also be improper to avoid considering the events which were
 not directly attributable to the West, shifting the focus to China's eastern
 neighbours. Since their ascension to power in 1644, the Qing dynasty attempted
 to incorporate various non-Manchurian populations into the China proper, leading
-to an inevitably-factionalised society, such that many Manchu households, also
+to an inevitably factionalised society, such that many Manchu households, also
 known as `banner' households, were facing extreme poverty from the 1820s
 \autocite{Elliott:2006}.  Extending to the military of the Qing, the
 240,000-strong Japanese armies brutally humiliated the 600,000-strong Chinese
@@ -273,7 +249,7 @@ haemoptysis: the ``coughing-up'' of blood in excess of 600 millilitres
 \autocite{Sabatine:2013}.} to negotiate an end to the importation of opium by
 the \textit{East India Company} \autocite{ChinaHistoricalArchives:1992}. In
 1839, preceding the \textit{First Opium War} by three years, \textit{Lin} wrote
-a strongly-worded letter of advice to \textit{Queen Victoria}, stating his
+a strongly worded letter of advice to \textit{Queen Victoria}, stating his
 strong desire to end the importation of opium by any means necessary.
 
 \input{sources/victoria-letter} % LETTER TO QUEEN VICTORIA, TeX-EMBED
@@ -283,7 +259,7 @@ investigation into any aspect of the Qing dynasty, as it is written with an
 extraordinarily strong sense of foreshadowing for a violent
 conflict\footnote{Some scholars have stated that this letter is a somewhat
 unique piece of attempted diplomacy from China, as the incredibly direct letter
-violates their usual conventions of writing in a ``highly-stylised'' fashion
+violates their usual conventions of writing in a ``highly stylised'' fashion
 \autocite{Kishlansky:1995}. This is a potential indicator to the true severity
 of the situation, such that a well-established governmental Chinaman would have
 correspondence in such a personalised and honest manner.} between the anti-opium
@@ -299,7 +275,7 @@ exasperating the level to which opium-smoking was widespread to ``all
 provinces''.
 
 The unfathomably widespread nature of opium throughout all Chinese provinces
-renders \textit{Lin}'s strongly-worded advice as an inescapable
+renders \textit{Lin}'s strongly worded advice as an inescapable
 point-of-interest, as it undisputedly provides evidence to show the fundamental
 scar that opium had left on the Chinese population, and the desperation of the
 Qing to restore order by any means necessary.
@@ -503,7 +479,7 @@ British-Qing relations at a diplomatic level.
 
 Similar to a treaty document, however, any newspaper column suffers the
 limitations of being a product of the society in which it was produced: Britain:
-the arguably-primary aggressor. Despite the anti-Anglo and anti-opium stance
+the arguably primary aggressor. Despite the anti-Anglo and anti-opium stance
 communicated in the column, it is clear that the \textit{Special Correspondent}
 largely places the blame of widespread addiction more on the Chinaman himself,
 rather than the traders acting on behalf of the \textit{East India Company},
@@ -572,7 +548,7 @@ of China and its citizens, thus worsening the position of the Qing.
 
 \input{sources/motono} % MOTONO ARGUMENT, TeX-EMBED
 
-\textit{Eiichi Motono}, native name \jap{本野英一}, is a Japanese professor in
+\textit{Eiichi Motono}, native name 本野英一, is a Japanese professor in
 the \textit{School of Political Science and Economics} at the prestigious
 \textit{Waseda University} in Tokyo. His 2000 revisionist book was published in
 both Britain by \textit{MacMillan Press Ltd.}, and in the United States by
@@ -650,7 +626,7 @@ both their rise to power and eventual demise.
 The \textit{Taiping Heavenly Kingdom} was an unrecognised monarchy within China
 from 1851 to 1864, largely run by a self-proclaimed brother of \textit{Jesus
 Christ} \autocites{Reilly:2014}{Yap:1954}. Literally translating from its
-Chinese name \zht{天國} as \textit{[the] Kingdom of Heaven}, its leader,
+Chinese name 天國 as \textit{[the] Kingdom of Heaven}, its leader,
 \textit{Hong Xiuquan}, sought to replace the traditional practices of
 Confucianism and Buddhism with Christianity \autocite{Spence:1996}.
 Understandably, this quickly led to an anti-Qing rebellion orchestrated by
@@ -690,7 +666,7 @@ did so at a great cost: further increasing the decentralisation of provisional
 authority figures, hence granting autonomy to a greater number of
 ``sub-states'', thus increasing the possibilities of a rebellion not only having
 the ability to begin, but also to garner large followings without the knowledge
-of the Qing. In \textit{Wu}'s largely-revisionist theory of the impacts of the
+of the Qing. In \textit{Wu}'s largely revisionist theory of the impacts of the
 \textit{Taiping Rebellion} upon the Manchurian fiscal
 system\footnote{\textit{Wu} also states in the introduction that due to the
 simultaneously centralised and decentralised nature of the pre-rebellion
@@ -705,7 +681,7 @@ geographically neighbouring.
 difficulties which faced the Qing government as a direct consequence of their
 recent conflicts with the \textit{Taiping Heavenly Kingdom}. Despite their
 victory, the severe negative impacts of the \textit{Taiping Rebellion} on the
-Qing is uniformly-accepted amongst modern scholarly Sinologists. It has been
+Qing is uniformly accepted amongst modern scholarly Sinologists. It has been
 estimated that approximately 600 cities were destroyed, and some groups, such as
 \textit{Nians} in Northern Jiangsu, and the long-oppressed Yunnan Muslims, took
 advantage of the civil unrest and pre-occupied state of the imperial authorities
@@ -724,7 +700,6 @@ Russia in America often extended to China. Although not in its prime until the
 1950s, \textit{McCarthyism} and \textit{The Red Scare} also contributed towards
 a general anti-Sino stance with the American populous due to their involvement
 in the Korean war \autocite{Schrecker:1998}.
-
 Although the thesis is relatively unlikely to suffer from great extents of
 exaggeration and deception in comparison to opinions from historians and authors
 with a more significant level of impartiality, any document which is a product
@@ -775,7 +750,7 @@ addition to the foreign-fuelled \textit{Boxer Rebellion}, the Opium Wars, which
 subsequently lead to a drastic decline in the Chinese national identity for
 which modern China is well-known, serves as the primary direct factor for the
 ultimate decline of the Qing dynasty. Of such signficance were the Opium wars,
-consequently causing a vast array of interconnected and seemingly-independent
+consequently causing a vast array of interconnected and seemingly independent
 events, that many of the alternative theories discussed in this essay may have
 been inititated by the foreign agression and `imperialism' to which the Opium
 wars drew such incredible international attention.
@@ -788,12 +763,10 @@ of 1894 exposed the vast military incompetence of the Qing to Greater Asia, thus
 enabling additional attack vectors and opportunities for Qing humiliation.
 
 \vfill
-\noindent\ignorespacesafterend%
-\textbf{Word Count: \wordcount}\\[1em]
-The abstract, verbatim sources, footnotes, and the bibliography have been
-omitted from the word count.
-
-\pagebreak
+\begin{flushright}
+        \textbf{Word Count: \wordcount}
+\end{flushright}
+\clearpage
 \setcounter{tocdepth}{1}
 \printbibliography[title={Cited Works}, heading=bibintoc]
 

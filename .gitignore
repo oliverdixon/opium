@@ -40,6 +40,7 @@ nocommit/
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+*.xdv
 
 # End of https://www.gitignore.io/api/latex
 
